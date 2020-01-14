@@ -21,7 +21,7 @@ Javascript moderno (ES6+), front-end e back-end (Node, Express, SQL e noSQL, Rea
 
 ## License
 
-[MIT License](https://github.com/Daniel-Silva/js-tdd/blob/master/LICENSE) @ [Daniel Silva](https://github.com/Daniel-Silva)
+[MIT License](https://github.com/Daniel-Silva/modernjs/blob/master/LICENSE) @ [Daniel Silva](https://github.com/Daniel-Silva)
 
 ## Perfil do LinkedIn 
 
