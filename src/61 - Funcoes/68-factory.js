@@ -4,7 +4,7 @@ function person(name, surname, age) {
 		surname,
 		age,
 		myName() {
-			return `My name is ${name}`;
+			return `My name is ${this.name}`;
 		}
 	};
 }
