@@ -35,7 +35,6 @@ body {
 
 .container h1,
 .container ul {
-	text-transform: uppercase;
 	color: var(--primary-color);
 	font-weight: 400;
 }
@@ -44,6 +43,10 @@ body {
 	margin: 10px 0;
 	font-size: .8em;
 	text-align: left;
+}
+
+.container ul li span {
+	text-transform: uppercase;
 }
 
 .assignment {

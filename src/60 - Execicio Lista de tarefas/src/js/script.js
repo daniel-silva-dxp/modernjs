@@ -24,9 +24,9 @@ function clearInput() {
 }
 
 function createBtnRemove(element) {
-	element.innerHTML += ' ';
+	element.innerHTML += '';
 	const btn = document.createElement('span');
-	btn.innerHTML = ' delete';
+	btn.innerHTML = 'delete';
 	btn.classList.add('icon-doc-remove');
 	element.appendChild(btn);
 }
@@ -34,7 +34,6 @@ function createBtnRemove(element) {
 function addAssignment() {
 	let str = input.value;
 	assignment.push(str);
-	console.log(assignment);
 	renderAssignments();
 	saveToStorage();
 	clearInput();
@@ -53,6 +52,11 @@ btn.addEventListener('click', () => {
 document.addEventListener('click', (e) => {
 	if (e.target.classList.contains('icon-doc-remove')) {
 		e.target.parentElement.remove();
+		let str = e.target.parentElement.innerText;
+		str = str.replace('delete', '');
+		let i = assignment.indexOf(str);
+		assignment.splice(i, 1);
+		saveToStorage();
 	}
 });
 
