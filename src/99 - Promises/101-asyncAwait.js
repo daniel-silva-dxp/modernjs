@@ -32,11 +32,15 @@ function foo(msg, temp) {
 // 	});
 
 async function bar() {
-	const fraseI = await foo('Frase I', rand(1, 4));
-	console.log(fraseI);
-	const fraseII = await foo('Frase II', rand());
-	console.log(fraseII);
-	const fraseIII = await foo('Frase III', rand(1, 5));
-	console.log(fraseIII);
+	try {
+		const fraseI = await foo('Frase I', rand(1, 4));
+		console.log(fraseI);
+		const fraseII = await foo('Frase II', rand());
+		console.log(fraseII);
+		const fraseIII = await foo('Frase III', rand(1, 5));
+		console.log(fraseIII);
+	} catch (e) {
+		console.log(e);
+	}
 }
 bar();
