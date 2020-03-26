@@ -1,0 +1,14 @@
+[
+	{
+		"nome": "Daniel Silva",
+		"notas": [ 5, 2, 3, 10 ]
+	},
+	{
+		"nome": "Flávia Silva",
+		"notas": [ 10, 2, 3, 10 ]
+	},
+	{
+		"nome": "Matheus Silva",
+		"notas": [ 10, 8, 3, 10 ]
+	}
+]
