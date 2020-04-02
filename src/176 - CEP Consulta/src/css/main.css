@@ -158,13 +158,4 @@ input[list=comodos]:focus {
 }
 
 @media (min-width: 1920px) {
-	.container {
-		max-width: 1200px;
-	}
-	.wrap {
-		max-width: 576px;
-	}
-	.form {
-		max-width: 576px;
-	}
 }
