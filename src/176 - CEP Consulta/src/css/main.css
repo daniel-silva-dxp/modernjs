@@ -25,19 +25,21 @@ body {
 .display-flex {
 	display: flex;
 	flex-flow: column wrap;
+	justify-content: center;
+	align-content: center;
 }
+/********************
+    AVATAR
+********************/
 .wrap {
-	background: #fee7d6;
+	background: #9bbad9;
 	width: 100%;
+	height: 100%;
 	padding: 15px;
 	margin-bottom: 15px;
 	border-radius: 5px;
 }
-.wrap-flex {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-content: center;
+.wrap.display-flex {
 	justify-content: space-evenly;
 }
 .wrap img {
@@ -50,20 +52,21 @@ body {
 	font-weight: 600;
 	font-size: 1.5em;
 	line-height: 1.5em;
-	letter-spacing: .05em;
 	margin-bottom: 10px;
 }
 .wrap-text p {
 	font-family: 'Roboto Mono', monospace;
 	font-size: .8em;
+	max-width: 300px;
+	margin: 0 auto;
 }
+
+/********************
+    FORM
+********************/
 .form {
 	width: 100%;
 	padding: 15px 0;
-	display: flex;
-	flex-flow: column wrap;
-	align-content: center;
-	justify-content: center;
 }
 .wrap-form {
 	width: 100%;
@@ -84,6 +87,7 @@ body {
 }
 .form-group .form-control {
 	border-style: solid;
+	border-radius: 5px;
 	border-color: #f7f7f7;
 	background: #f8f8f8;
 	width: 100%;
@@ -96,10 +100,8 @@ body {
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
-input[type=text]:focus,
-input[type=number]:focus,
-input[list=comodos]:focus {
-	border-color: #ccc;
+input[type=text]:focus {
+	border-color: #9bbad9;
 }
 
 /********************
@@ -123,8 +125,8 @@ input[list=comodos]:focus {
 @media (min-width: 992px) {
 	.container {
 		max-width: 960px;
-		height: 70vh;
-		margin-top: 15vh;
+		height: 60vh;
+		margin-top: 20vh;
 	}
 	.box {
 		border-radius: 5px;
@@ -132,13 +134,13 @@ input[list=comodos]:focus {
 		-moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
 		box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
 	}
+	.container.display-flex {
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
 	.wrap {
 		max-width: 458px;
 		margin-bottom: 0;
-	}
-	.display-flex {
-		flex-flow: row wrap;
-		justify-content: space-between;
 	}
 	.form {
 		max-width: 458px;
