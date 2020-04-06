@@ -102,7 +102,17 @@ body {
 input[type=text]:focus {
 	border-color: #9bbad9;
 }
+.erro {
+	font-size: .6em;
+	font-weight: 800;
+	color: tomato;
+	letter-spacing: .1em;
+	margin-top: -8px;
+	text-transform: uppercase;
 
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
 /********************
     MEDIA QUERIES
 ********************/
