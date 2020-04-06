@@ -1,4 +1,5 @@
 const consulta = (element) => document.querySelector(element);
+const create = (element) => document.createElement(element);
 
 const inputCep = consulta('#inputCEP');
 inputCep.addEventListener('input', function(e) {
@@ -11,7 +12,7 @@ inputCep.addEventListener('input', function(e) {
 		promise
 			.then((dado) => {
 				if (dado.erro) {
-					throw new Error('CEP não existe');
+					cepInvalido(dado);
 				}
 				viewEndereco(dado);
 			})
@@ -42,4 +43,13 @@ function viewEndereco(endereco) {
 	inputBairro.value = endereco.bairro;
 	inputCidade.value = endereco.localidade;
 	inputEstado.value = endereco.uf;
+}
+
+function cepInvalido() {
+	const inputCep = consulta('.form-group .controls');
+
+	const p = create('p');
+	p.innerHTML = `cep inválido!`;
+	p.classList.add('erro');
+	inputCep.appendChild(p);
 }
